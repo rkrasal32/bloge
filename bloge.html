@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <h2>1.difference-between-local-storage-session-storage</h2>
+    <p><b>Local Storage:</b>  This read-only interface property provides access to the Document’s local storage object, the stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets cleared when the page session ends – that is when the page is closed. It is cleared when the last “private” tab of a browser is  closed (localStorage data for a document loaded in a private browsing or incognito session).</p>
+
+   
+       <p><b>Local storage Method:</b> <br>
+        localStorage.setItem(key, value) <br>
+        localStorage.getItem(key)<br>
+        localStorage.removeItem(key)<br>
+        localStorage.clear()</p>
+
+        
+        <p><b>Session Storage:</b> Session Storage objects can be accessed using the sessionStorage read-only property. The difference between sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends.
+
+        <br> A unique page session gets created once a document is loaded in a browser tab.Page sessions are valid for only one tab at a time.</p>
+    
+       
+           <p><b>Session Storage Method:</b> <br>
+            sessionStorage.setItem(key, value) <br>
+        sessionStorage.getItem(key) <br>
+        sessionStorage.removeItem(key) <br>
+        sessionStorage.clear()</p>
+
+        
+<h2>2.block scope vs global scope</h2>
+<p> <b>Global Scope</b>
+    The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
+    </p>
+    <p> <b>Block Scope</b>
+        Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.
+        </p>
+
+        <h2>3.Even Loop</h2>
+        <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. Let’s take a look at what happens on the back-end.
+        
+            The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a function is finished, it is popped from the stack.
+            The event queue is responsible for sending new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.
+            Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
+            
+            An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.
+            
+            Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
+            
+            The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
+            </p>
+        
+            <h2>Hou can i Get Undefiend</h2>
+            <p>When called Without Defining The variable</p>
+            <P>if You Misspell</P>
+            <p>If a variabke is Decleared inside a function & then It Tries to Acces it Outsude the Function</p>
+</body>
+</html>
